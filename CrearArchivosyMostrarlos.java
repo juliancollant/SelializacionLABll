@@ -5,6 +5,15 @@ public class ManejoArchivos {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("¿Desea crear un archivo? (Sí/No)");
+        String respuesta = scanner.nextLine();
+
+        if (respuesta.equalsIgnoreCase("Sí") || respuesta.equalsIgnoreCase("Si")) {
+            crearArchivo();
+        } else {
+            System.out.println("No se creará un archivo.");
+        }
+
         int opcion;
         do {
             System.out.println("----- Menú -----");
